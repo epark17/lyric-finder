@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 const SingleTrack = props => {
   const { track } = props;
 
+  // album image
   // console.log(track.album_coverart_100x100); //undefined?
+
   return (
     <div className="col-md-6">
       <div className="card mb-4 shadow-sm">
         <div className="card-body">
+          {/* <img class="card-img-top" src={} alt={track.album_name}> */}
           <h5>{track.artist_name}</h5>
           <p className="card-text">
             <strong>

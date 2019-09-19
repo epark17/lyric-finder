@@ -11,6 +11,7 @@ class Tracks extends Component {
         {/* currently, the value = the entire state */}
         {value => {
           const { track_list, heading } = value;
+          console.log('Tracks value', value);
 
           if (track_list === undefined || !track_list.length) {
             return <Spinner />;
