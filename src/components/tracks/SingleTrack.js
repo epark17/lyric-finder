@@ -5,7 +5,8 @@ const SingleTrack = props => {
   const { track } = props;
 
   // album image
-  // console.log(track.album_coverart_100x100); //undefined?
+  // album.get?album_id=1425417
+  // body.album.album_coverart_100x100 -> string
 
   return (
     <div className="col-md-6">
@@ -24,8 +25,7 @@ const SingleTrack = props => {
             </strong>
             : {track.album_name}
           </p>
-          {/* Button */}
-          {/* NOT using a tag - in react router using Link */}
+          {/* Button NOT using a tag - in react router using Link */}
           <Link
             to={`lyrics/track/${track.track_id}`}
             className="btn btn-dark btn-block"
