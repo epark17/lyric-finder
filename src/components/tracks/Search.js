@@ -36,6 +36,12 @@ class Search extends Component {
                   ></input>
                 </div>
               </form>
+              <button
+                className="btn btn-primary btn-lg btn-block mb-5"
+                type="submit"
+              >
+                Get Track Lyrics
+              </button>
             </div>
           );
         }}
