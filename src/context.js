@@ -3,11 +3,27 @@ import axios from 'axios';
 
 // creating Context
 const Context = React.createContext();
+
+// Reducer (dispatched action will go here)
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SEARCH_TRACKS':
+      return {
+        ...state,
+        track_list: action.payload,
+        heading: 'Search Results',
+      };
+    default:
+      return state;
+  }
+};
+
 // not export default!
 export class Provider extends Component {
   state = {
     track_list: [],
     heading: 'Top 10 Tracks',
+    dispatch: action => this.setState(state => reducer(state, action)),
   };
 
   async componentDidMount() {
@@ -23,6 +39,7 @@ export class Provider extends Component {
 
   render() {
     return (
+      // dispatch is also sent along as value (the whole state is being passed)
       <Context.Provider value={this.state}>
         {this.props.children}
       </Context.Provider>

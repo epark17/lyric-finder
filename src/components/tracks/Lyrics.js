@@ -39,6 +39,8 @@ class Lyrics extends Component {
     const { track, lyrics } = this.state;
     // album image
 
+    // console.log(lyrics.lyrics_body);
+
     if (
       track === undefined ||
       lyrics === undefined ||
@@ -59,7 +61,10 @@ class Lyrics extends Component {
               <span className="text-secondary">{track.artist_name}</span>
             </h5>
             <div className="card-body">
-              <p className="card-text">{lyrics.lyrics_body}</p>
+              {/* <p className="card-text">{lyrics.lyrics_body}</p> */}
+              <p className="card-text">
+                {lyrics.lyrics_body.length !== 0 ? lyrics.lyrics_body : 'N/A'}
+              </p>
             </div>
           </div>
 
