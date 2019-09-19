@@ -10,7 +10,6 @@ export class Provider extends Component {
     heading: 'Top 10 Tracks',
   };
 
-  // instead of dummy data, using musixmatch api
   async componentDidMount() {
     try {
       const { data } = await axios.get(

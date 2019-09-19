@@ -24,7 +24,7 @@ const SingleTrack = props => {
           {/* Button */}
           {/* NOT using a tag - in react router using Link */}
           <Link
-            to={`lyrics/track/${track.trac_id}`}
+            to={`lyrics/track/${track.track_id}`}
             className="btn btn-dark btn-block"
           >
             <i className="fas fa-chevron-right"></i> View Lyrics
